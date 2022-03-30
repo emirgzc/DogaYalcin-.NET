@@ -1,0 +1,33 @@
+﻿
+@model IEnumerable<EntityLayer.Concrete.Slider>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AnaLayout.cshtml";
+}
+
+
+<section class="hero">
+	<div class="hero__slider owl-carousel">
+
+		@foreach (var item in Model)
+		{
+			<div class="hero__items set-bg" data-setbg="@item.Image">
+				<div class="hero__text">
+					<h2>@item.Title</h2>
+					<p style="color:#fff;">@item.Desc</p>
+					<a href="tel:05339737417" class="primary-btn">İletişim : 0 533 973 74 17</a>
+					@Html.Action("SocialMedia","Slider")
+				</div>
+			</div>
+		}
+
+	</div>
+	<div class="slide-num" id="snh-1"></div>
+	<div class="slider__progress"><span></span></div>
+</section>
+
+@Html.Action("AnaServices", "Services")
+
+@Html.Action("Footer","Slider")
+

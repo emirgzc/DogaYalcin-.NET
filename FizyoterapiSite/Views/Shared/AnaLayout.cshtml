@@ -1,0 +1,98 @@
+﻿
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Fizyoterapist Doğa Yalçın">
+	<meta name="keywords" content="Fizyoterapi, Doğa Yalçın">
+	<meta name="author" content="Doğa Yalçın">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Doğa Yalçın ©</title>
+	<link rel="shortcut icon" type="image/x-icon" href="~/stag/img/logo.png" />
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+		  rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+
+	<!-- Css Styles -->
+	<link rel="stylesheet" href="~/stag/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="~/stag/css/font-awesome.min.css" type="text/css">
+	<link rel="stylesheet" href="~/stag/css/elegant-icons.css" type="text/css">
+	<link rel="stylesheet" href="~/stag/css/owl.carousel.min.css" type="text/css">
+	<link rel="stylesheet" href="~/stag/css/slicknav.min.css" type="text/css">
+	<link rel="stylesheet" href="~/stag/css/slick.css" type="text/css">
+	<link rel="stylesheet" href="~/stag/css/style.css" type="text/css">
+</head>
+
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Offcanvas Menu Begin -->
+	<div class="offcanvas-menu-overlay"></div>
+	<div class="offcanvas-menu-wrapper">
+		<div class="offcanvas__logo">
+			<a href="/Slider/Index/"><img src="~/stag/img/logo.png" alt="" style="width: 100px; height: 50px; color: #fff;"><span style="color:#fff;">DOĞA YALÇIN</span></a> 
+		</div>
+		<div id="mobile-menu-wrap"></div>
+		<div class="offcanvas__widget">
+			<span>Bizimle iletişime geçin</span>
+			@Html.Action("ContactPhone","Slider")
+		</div>
+	</div>
+	<!-- Offcanvas Menu End -->
+	<!-- Header Section Begin -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-2">
+					<div class="header__logo">
+						<span style="color:#fff;">DOĞA YALÇIN</span>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<nav class="header__menu mobile-menu">
+						<ul>
+							<li><a href="/Slider/Index/">Ana Sayfa</a></li>
+							<li><a href="/About/Index/">Hakkımızda</a></li>
+							<li><a href="/Services/Index/">Hizmetlerimiz</a></li>
+							<li><a href="/Galeri/Index/">Galeri</a></li>
+							<li><a href="/Blog/Index/">Blog</a></li>
+							<li><a href="/Contact/Index/">İletişim</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-lg-2">
+					<div class="header__widget">
+						<span>Bizimle iletişime geçin</span>
+						@Html.Action("ContactPhone", "Slider")
+					</div>
+				</div>
+			</div>
+			<div class="canvas__open"><i class="fa fa-bars"></i></div>
+		</div>
+	</header>
+
+	@RenderBody()
+
+	<!-- Latest Section End -->
+	<!-- Footer Section Begin -->
+	<!-- Footer Section End -->
+	<!-- Js Plugins -->
+	<script src="~/stag/js/jquery-3.3.1.min.js"></script>
+	<script src="~/stag/js/bootstrap.min.js"></script>
+	<script src="~/stag/js/jquery.slicknav.js"></script>
+	<script src="~/stag/js/owl.carousel.min.js"></script>
+	<script src="~/stag/js/slick.min.js"></script>
+	<script src="~/stag/js/main.js"></script>
+</body>
+
+</html>

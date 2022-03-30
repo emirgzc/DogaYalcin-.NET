@@ -1,0 +1,59 @@
+﻿
+@model IEnumerable<EntityLayer.Concrete.Galeri>
+
+@{
+	ViewBag.Title = "AGaleriList";
+	Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<a href="/Galeri/AGaleriAdd/" class="btn btn-primary mb-3">Resim Ekle</a>
+
+<div class="row">
+	@foreach (var item in Model)
+	{
+		<div class="col-lg-3">
+			<div class="card">
+				<div class="card-body">
+					<div class="profile-tab">
+						<div class="custom-tab-1">
+							<div class="tab-content">
+								<div id="my-posts" class="tab-pane fade active show">
+									<div class="my-post-content pt-3">
+										<div class="profile-uoloaded-post pb-3">
+											<a href="@item.Image" target="_blank">
+												<img src="@item.Image" alt="" class="img-fluid" style="width: 100%; height: 220px; object-fit: cover;">
+											</a>
+										</div>
+										@if (item.Status == true)
+										{
+											<p class="text-success">Yayında</p>
+										}
+										else
+										{
+											<p class="text-danger">Yayında Değil</p>
+										}
+										<a href="/Galeri/AGaleriDelete/@item.PhotoId" class="btn btn-primary">
+											<i class="fa fa-trash"></i> Sil
+										</a>
+										@if (item.Status == true)
+										{
+											<a href="/Galeri/AGaleriDoFalse/@item.PhotoId" class="btn btn-danger">Pasif Yap</a>
+										}
+										else
+										{
+											<a href="/Galeri/AGaleriDoTrue/@item.PhotoId" class="btn btn-success">Aktif Yap</a>
+										}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+</div>
+
+
+
+

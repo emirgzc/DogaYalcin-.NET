@@ -1,0 +1,13 @@
+﻿
+@model IEnumerable<EntityLayer.Concrete.Settings>
+
+<div class="hero__social">
+	@foreach (var item in Model)
+	{
+		<a href="@item.Facebook"><i class="fa fa-facebook"></i></a>
+		<a href="@item.Twitter"><i class="fa fa-twitter"></i></a>
+		<a href="@item.Instagram"><i class="fa fa-instagram"></i></a>
+		<a href="@item.Linkedin"><i class="fa fa-linkedin"></i></a>
+		<a href="@item.Youtube"><i class="fa fa-youtube-play"></i></a>
+	}
+</div>

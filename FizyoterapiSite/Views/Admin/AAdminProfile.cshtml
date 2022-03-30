@@ -1,0 +1,23 @@
+﻿
+@model EntityLayer.Concrete.Admin
+
+@{
+	ViewBag.Title = "AAdminProfile";
+	Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("AAdminProfile", "Admin", FormMethod.Post))
+{
+	<div class="form-group">
+		@Html.HiddenFor(x => x.AdminId, new { @class = "form-control" })
+
+		@Html.Label("Admin Adı")
+		@Html.TextBoxFor(x => x.Username, new { @class = "form-control", @required = "required" })
+		<br />
+		@Html.Label("Admin Şifre")
+		<input type="password" name="Password" class="form-control" />
+		<br />
+		<button class="btn btn-info">Güncelle</button>
+	</div>
+}
+

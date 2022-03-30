@@ -1,0 +1,44 @@
+﻿
+@model IEnumerable<EntityLayer.Concrete.Admin>
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="col-lg-12">
+	<a class="btn btn-info mb-3" href="/Admin/AAddAdmin/">Yeni Admin</a>
+	<div class="card">
+		<div class="card-body">
+			<div class="card-title">
+				<h4>Adminler</h4>
+			</div>
+			<div class="table-responsive">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Kullanıcı Adı</th>
+							<th>Sil</th>
+							<th>Güncelle</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model)
+						{
+							<tr>
+								<th>@item.AdminId</th>
+								<td>@item.Username</td>
+								<td><a href="/Admin/AAdminDelete/@item.AdminId" class="btn btn-danger">Sil</a></td>
+								<td><a href="/Admin/AAdminUpdate/@item.AdminId" class="btn btn-outline-success">Güncelle</a></td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

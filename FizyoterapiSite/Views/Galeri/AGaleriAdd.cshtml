@@ -1,0 +1,37 @@
+﻿
+@model EntityLayer.Concrete.Galeri
+
+@{
+	ViewBag.Title = "AGaleriAdd";
+	Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="col-xl-12 col-xxl-12">
+	<div class="card">
+		<div class="card-header">
+			<h4 class="card-title">Resim Ekleme <span class="text-danger">(Lütfen 3Mb' dan Yüksek Resim Yükleme Yapmayınız!)</span></h4>
+			@if (ViewBag == null)
+			{
+				<h5 class="text-success">Yükleme Başarılı</h5>
+			}
+			else
+			{
+				<h5 class="text-danger">@ViewBag.hata</h5>
+			}
+		</div>
+		<div class="card-body">
+			<div class="basic-form">
+				@using (Html.BeginForm("AGaleriAdd", "Galeri", FormMethod.Post, new { enctype = "multipart/form-data" }))
+				{
+					<div class="custom-file">
+						<label class="custom-file-label">Resim Seç</label>
+						<br />
+						<input type="file" name="Image" class="form-control" required="">
+					</div>
+					<button class="btn btn-success mt-4">Ekle</button>
+				}
+			</div>
+		</div>
+	</div>
+</div>
+

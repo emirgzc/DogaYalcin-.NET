@@ -1,0 +1,11 @@
+C:\Users\emir\source\repos\FizyoterapiSite\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\emir\source\repos\FizyoterapiSite\EntityLayer\bin\Debug\EntityLayer.dll.config
+C:\Users\emir\source\repos\FizyoterapiSite\EntityLayer\bin\Debug\EntityLayer.dll
+C:\Users\emir\source\repos\FizyoterapiSite\EntityLayer\bin\Debug\EntityLayer.pdb
+C:\Users\emir\source\repos\FizyoterapiSite\EntityLayer\bin\Debug\EntityFramework.dll
+C:\Users\emir\source\repos\FizyoterapiSite\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\emir\source\repos\FizyoterapiSite\EntityLayer\bin\Debug\EntityFramework.xml
+C:\Users\emir\source\repos\FizyoterapiSite\EntityLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\emir\source\repos\FizyoterapiSite\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
+C:\Users\emir\source\repos\FizyoterapiSite\EntityLayer\obj\Debug\EntityLayer.dll
+C:\Users\emir\source\repos\FizyoterapiSite\EntityLayer\obj\Debug\EntityLayer.pdb

@@ -1,0 +1,48 @@
+﻿
+@model IEnumerable<EntityLayer.Concrete.About>
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/AnaLayout.cshtml";
+}
+
+
+<!-- Header Section End -->
+<!-- Breadcrumb Section Begin -->
+<div class="breadcrumb-option spad set-bg" data-setbg="/stag/img/a43.jpeg">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="breadcrumb__text">
+					<h2>HAKKIMIZDA</h2>
+					<div class="breadcrumb__links">
+						<a href="/Slider/Index/">Ana Sayfa</a>
+						<span>Hakkımızda</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Breadcrumb Section End -->
+<!-- About Page Section Begin -->
+<section class="about-page spad">
+	<div class="container">
+		<div class="row">
+			@foreach (var item in Model)
+			{
+				<div class="col-lg-12 col-md-12">
+					<div class="about__page__services">
+						<div class="about__page__services__text">
+							<h2 style="text-align:center;" class="mb-3">@Html.Raw(item.Title)</h2>
+							<p style="text-align:center;">@Html.Raw(item.Desc)</p>
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</section>
+
+@Html.Action("Footer","Slider")
+
